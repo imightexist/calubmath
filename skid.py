@@ -50,8 +50,8 @@ def doQuestion(array):
     print()
     print()
     print()
-print("calubSAT")
-print("Get 6 questions correct in a row to get access to Windows")
+print("calubmath")
+print("You've been a bad boy. Answer 6/8 questions correctly to access Windows.")
 print()
 
 while correct < 6:
