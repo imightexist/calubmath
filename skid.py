@@ -17,7 +17,7 @@ correct = 0
 answered = 0
 def getQuestion(array):
     q = None
-    while (q is None) or ("<svg" in q):
+    while (q is None) or ("<svg" in q["question_text"]):
         q = choice(array)
     return q
 
