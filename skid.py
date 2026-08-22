@@ -24,6 +24,7 @@ def getQuestion(array):
 def doQuestion(array):
     global done
     global correct
+    global answered
     q = getQuestion(array)
     # qd = q["question"]
     print(f"Q: {q["question_text"]}")
