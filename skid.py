@@ -53,7 +53,7 @@ print("You've been a bad boy. Answer 6/8 questions correctly to access Windows."
 print()
 shit = True
 while correct < 6:
-    if answered>=8:
+    if answered>=8 or answered-correct>=3:
         answered = 0
         correct = 0
         print("You failed the test. Please try again.")
