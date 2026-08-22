@@ -54,12 +54,15 @@ def doQuestion(array):
 print("calubmath")
 print("You've been a bad boy. Answer 6/8 questions correctly to access Windows.")
 print()
-
+shit = True
 while correct < 6:
     if answered>=8:
         answered = 0
         correct = 0
-    doQuestion(eng)
-    doQuestion(math)
+    if shit:
+        doQuestion(eng)
+    else:
+        doQuestion(math)
+    shit = not shit
 
 print("Very well. Come back soon!")
