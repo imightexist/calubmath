@@ -7,13 +7,14 @@ signal(SIGINT, SIG_IGN)
 
 eng = None
 math = None
-with open("eng.json", "rb") as f:
+with open("maths_practice_test1.json", "rb") as f:
     eng = load(f)
-with open("math.json", "rb") as f:
+with open("maths_practice_test2.json", "rb") as f:
     math = load(f)
 
 done = []
 correct = 0
+answered = 0
 def getQuestion(array):
     q = None
     while (q is None) or (q["id"] in done):
@@ -38,12 +39,13 @@ def doQuestion(array):
             inp = input("A: ").strip().upper()[0]
         except:
             print()
+    answered += 1
     if inp == qd["correct_answer"]:
         correct += 1
         print("Correct answer! "+str(correct)+"/6")
         done.append(q["id"])
     else:
-        correct = 0
+        # correct = 0
         print("WRONG! "+str(correct)+"/6")
         print("Correct answer: " + qd["correct_answer"])
         done = []
@@ -55,6 +57,9 @@ print("You've been a bad boy. Answer 6/8 questions correctly to access Windows."
 print()
 
 while correct < 6:
+    if answered>=8:
+        answered = 0
+        correct = 0
     doQuestion(eng)
     doQuestion(math)
 
