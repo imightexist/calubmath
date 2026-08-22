@@ -48,8 +48,6 @@ def doQuestion(array):
         print("Correct answer: " + q["correct_answer"])
         # done = []
     print()
-    print()
-    print()
 print("calubmath")
 print("You've been a bad boy. Answer 6/8 questions correctly to access Windows.")
 print()
@@ -58,6 +56,8 @@ while correct < 6:
     if answered>=8:
         answered = 0
         correct = 0
+        print("You failed the test. Please try again.")
+        print()
     if shit:
         doQuestion(eng)
     else:
