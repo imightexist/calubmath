@@ -40,11 +40,11 @@ def doQuestion(array):
     answered += 1
     if inp == q["correct_answer"]:
         correct += 1
-        print("Correct answer! "+str(correct)+"/8")
+        print("Correct answer! "+str(correct)+"/"+str(answered))
         # done.append(q["id"])
     else:
         # correct = 0
-        print("WRONG! "+str(correct)+"/8")
+        print("WRONG! "+str(correct)+"/"+str(answered))
         print("Correct answer: " + q["correct_answer"])
         # done = []
     print()
