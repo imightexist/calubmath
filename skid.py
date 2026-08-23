@@ -2,6 +2,7 @@ from signal import signal, SIGINT, SIG_IGN
 from json import load
 from random import choice
 import subprocess
+import time
 
 signal(SIGINT, SIG_IGN)
 
@@ -49,14 +50,15 @@ def doQuestion(array):
         # done = []
     print()
 print("calubmath")
-print("You've been a bad boy. Answer 6/8 questions correctly to access Windows.")
+print("You've been a bad boy. Answer 4/5 questions correctly to access Windows.")
 print()
 shit = True
-while correct < 6:
-    if answered>=8 or answered-correct>2:
+while correct < 4:
+    if answered>=5 or answered-correct>1:
         answered = 0
         correct = 0
         print("You failed the test. Please try again.")
+        time.sleep(60)
         print()
     if shit:
         doQuestion(eng)
