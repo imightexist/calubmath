@@ -57,8 +57,8 @@ while correct < 4:
     if answered>=5 or answered-correct>1:
         answered = 0
         correct = 0
-        print("You failed the test. Try again after 60 seconds.")
-        time.sleep(60)
+        print("You failed the test. Try again after 30 seconds.")
+        time.sleep(30)
         print()
     if shit:
         doQuestion(eng)
