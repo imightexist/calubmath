@@ -50,7 +50,7 @@ def doQuestion(array):
         # done = []
     print()
 print("calubmath")
-print("You've been a bad boy. Answer 4/5 questions correctly to access Windows.")
+print("This program is used to verify that you are old enough and literate enough to use this computer. Answer 4/5 questions correctly to access Windows.")
 print()
 shit = True
 while correct < 4:
