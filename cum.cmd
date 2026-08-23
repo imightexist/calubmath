@@ -28,4 +28,5 @@ regedit /s "%cd%\fix.reg"
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled.png"
 start userinit
 taskkill /f /im pythonw.exe
+taskkill /f /im calculator.exe
 exit
