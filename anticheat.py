@@ -2,12 +2,9 @@ from signal import signal, SIGINT, SIG_IGN
 import subprocess
 signal(SIGINT, SIG_IGN)
 while True:
-  try:
-    subprocess.run(["taskkill","/f","/im","chrome.exe"], check=True)
-    subprocess.run(["taskkill","/f","/im","msedge.exe"], check=True)
-    subprocess.run(["taskkill","/f","/im","plasmafox.exe"], check=True)
-    subprocess.run(["taskkill","/f","/im","firefox.exe"], check=True)
-    subprocess.run(["taskkill","/f","/im","iexplore.exe"], check=True)
-    subprocess.run(["taskkill","/f","/im","r3dfox.exe"], check=True)
-  except Exception:
-    pass
+  subprocess.Popen(["taskkill","/f","/im","chrome.exe"]).wait()
+  subprocess.Popen(["taskkill","/f","/im","msedge.exe"]).wait()
+  subprocess.Popen(["taskkill","/f","/im","plasmafox.exe"]).wait()
+  subprocess.Popen(["taskkill","/f","/im","firefox.exe"]).wait()
+  subprocess.Popen(["taskkill","/f","/im","iexplore.exe"]).wait()
+  subprocess.Popen(["taskkill","/f","/im","r3dfox.exe"]).wait()
