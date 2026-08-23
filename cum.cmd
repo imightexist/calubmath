@@ -2,7 +2,6 @@
 pushd %~dp0%
 noclose
 if "%1"=="skid" goto init
-if "%1"=="anticheat" goto anticheat
 echo press any key if you agree that you are ONLY doing this to discipline a misbehaving child...
 pause > nul
 if exist python goto python
