@@ -23,7 +23,7 @@ start python\pythonw anticheat.py
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled2.png"
 python\python skid.py
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
-regedit /s fix.reg
+regedit /s "%cd%\fix.reg"
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /f /d "%cd%\Untitled.png"
 start userinit
 taskkill /f /im pythonw.exe
