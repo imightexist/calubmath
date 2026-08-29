@@ -47,10 +47,11 @@ def doQuestion(array):
         # correct = 0
         print("WRONG! "+str(correct)+"/"+str(answered))
         print("Correct answer: " + q["correct_answer"])
+        print("Explanation: "+q["explanation"])
         # done = []
     print()
 print("calubmath")
-print("This program is used to verify that you are old enough and literate enough to use this computer. Answer 4/5 questions correctly to access Windows.")
+print("You've been a bad boy. Answer 4/5 questions correctly to access Windows.")
 print()
 shit = True
 while correct < 4:
